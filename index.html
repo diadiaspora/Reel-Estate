@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isabella Laurent | Luxury Real Estate</title>
+  <meta name="description" content="Luxury real estate agent specializing in exceptional homes, waterfront estates, and exclusive neighborhoods. Search listings, request a home valuation, and schedule a private consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">IL</span>
+        <span class="brand-text">Isabella Laurent<br><small>Luxury Real Estate</small></span>
+      </a>
+
+      <nav class="nav" id="primaryNav">
+        <a href="#listings">Listings</a>
+        <a href="#areas">Areas</a>
+        <a href="#about">About</a>
+        <a href="#insights">Market Insights</a>
+        <a href="#valuation" class="nav-cta">Home Valuation</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Private Estates &amp; Exceptional Properties</p>
+        <h1>Curating Extraordinary<br><span>Places to Call Home</span></h1>
+        <p class="hero-copy">
+          Discreet representation, refined market insight, and bespoke service for discerning buyers and sellers.
+        </p>
+        <div class="hero-actions">
+          <a href="#listings" class="btn btn-gold">Explore Listings</a>
+          <a href="#valuation" class="btn btn-outline">What’s My Home Worth?</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>$480M+</strong><span>Career sales volume</span></div>
+          <div><strong>18</strong><span>Years of experience</span></div>
+          <div><strong>Top 1%</strong><span>Luxury market producer</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">The Standard of Service</p>
+          <h2>A trusted advisor for life’s most significant move</h2>
+          <p>
+            I represent buyers and sellers with a calm, strategic approach and an unwavering commitment to discretion,
+            presentation, and results. From architectural estates to waterfront retreats and city penthouses, every
+            engagement is tailored to your goals.
+          </p>
+          <a href="#about" class="text-link">Meet Isabella</a>
+        </div>
+
+        <div class="intro-card">
+          <h3>Why Clients Choose Isabella</h3>
+          <ul>
+            <li>Private, white-glove representation</li>
+            <li>Editorial-quality property marketing</li>
+            <li>Access to off-market opportunities</li>
+            <li>Precise pricing and negotiation strategy</li>
+            <li>Concierge support from listing to closing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section listings" id="listings">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Current Portfolio</p>
+            <h2>Featured Listings</h2>
+          </div>
+          <p class="section-note">
+            Connect your IDX/MLS feed here to display live, automatically updated property results.
+          </p>
+        </div>
+
+        <form class="listing-filters" id="listingFilters">
+          <div class="field">
+            <label for="searchLocation">Location</label>
+            <input type="text" id="searchLocation" placeholder="City, neighborhood, or ZIP" />
+          </div>
+
+          <div class="field">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType">
+              <option value="all">All Properties</option>
+              <option value="estate">Estate</option>
+              <option value="waterfront">Waterfront</option>
+              <option value="penthouse">Penthouse</option>
+              <option value="historic">Historic Home</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="minPrice">Min Price</label>
+            <select id="minPrice">
+              <option value="0">No minimum</option>
+              <option value="1000000">$1M+</option>
+              <option value="2500000">$2.5M+</option>
+              <option value="5000000">$5M+</option>
+              <option value="10000000">$10M+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="bedrooms">Bedrooms</label>
+            <select id="bedrooms">
+              <option value="0">Any</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-gold">Search</button>
+        </form>
+
+        <div class="listing-grid" id="listingGrid"></div>
+        <p class="empty-state" id="listingEmpty" hidden>No properties match your search. Please refine your criteria.</p>
+      </div>
+    </section>
+
+    <section class="section areas" id="areas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Explore the Market</p>
+            <h2>Areas of Expertise</h2>
+          </div>
+          <p class="section-note">Neighborhood-level guidance, curated inventory, and local market intelligence.</p>
+        </div>
+
+        <div class="area-grid">
+          <a href="#valuation" class="area-card">
+            <div class="area-image area-1"></div>
+            <div class="area-body">
+              <h3>The Heights</h3>
+              <p>Architectural estates, tree-lined streets, and timeless private residences.</p>
+              <span>Explore Area →</span>
+            </div>
+          </a>
+
+          <a href="#valuation" class="area-card">
+            <div class="area-image area-2"></div>
+            <div class="area-body">
+              <h3>Harbor Point</h3>
+              <p>Waterfront living, deepwater docks, and sweeping sunset views.</p>
+              <span>Explore Area →</span>
+            </div>
+          </a>
+
+          <a href="#valuation" class="area-card">
+            <div class="area-image area-3"></div>
+            <div class="area-body">
+              <h3>Old Town</h3>
+              <p>Historic charm, walkable streets, and meticulously restored homes.</p>
+              <span>Explore Area →</span>
+            </div>
+          </a>
+
+          <a href="#valuation" class="area-card">
+            <div class="area-image area-4"></div>
+            <div class="area-body">
+              <h3>The Reserve</h3>
+              <p>Gated estates, championship golf, and resort-caliber amenities.</p>
+              <span>Explore Area →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section valuation" id="valuation">
+      <div class="container valuation-grid">
+        <div class="valuation-copy">
+          <p class="eyebrow">Seller Services</p>
+          <h2>What is your home worth?</h2>
+          <p>
+            Receive a complimentary comparative market analysis tailored to your property, location, condition, and
+            current buyer demand. Your information remains confidential.
+          </p>
+
+          <ul class="valuation-points">
+            <li>Personalized pricing strategy</li>
+            <li>Recent comparable sales review</li>
+            <li>Recommendations to maximize value</li>
+            <li>Confidential consultation</li>
+          </ul>
+        </div>
+
+        <form class="valuation-form" id="valuationForm" novalidate>
+          <h3>Request Your CMA</h3>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="field">
+              <label for="propertyAddress">Property Address</label>
+              <input type="text" id="propertyAddress" name="propertyAddress" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="timeline">When are you considering selling?</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select a timeline</option>
+              <option value="immediately">Immediately</option>
+              <option value="3-6-months">Within 3–6 months</option>
+              <option value="6-12-months">Within 6–12 months</option>
+              <option value="exploring">Just exploring</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-full">Request Free Valuation</button>
+          <p class="form-success" id="valuationSuccess" hidden>
+            Thank you. Your request has been received. Isabella will be in touch shortly.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Client Experiences</p>
+          <h2>Trusted by Exceptional Clients</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <figure class="testimonial">
+            <blockquote>
+              “Isabella understood the emotional and financial weight of selling our family estate. Her preparation,
+              discretion, and negotiation were exceptional.”
+            </blockquote>
+            <figcaption><strong>Michael &amp; Elena R.</strong><span>Estate Sellers</span></figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>
+              “She found us an extraordinary home before it ever reached the open market. Her local knowledge is
+              simply unmatched.”
+            </blockquote>
+            <figcaption><strong>Daniel S.</strong><span>Luxury Home Buyer</span></figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>
+              “From staging to closing, every detail was handled with precision. Our property sold above expectations.”
+            </blockquote>
+            <figcaption><strong>Charlotte M.</strong><span>Waterfront Seller</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section insights" id="insights">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Market Insights</p>
+            <h2>Luxury Living &amp; Local Intelligence</h2>
+          </div>
+          <a href="#insights" class="text-link">View All Articles</a>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card">
+            <div class="insight-image insight-1"></div>
+            <div class="insight-body">
+              <p class="insight-date">Market Report</p>
+              <h3>What Luxury Buyers Are Prioritizing This Season</h3>
+              <p>Privacy, wellness amenities, architectural character, and turnkey living continue to shape demand.</p>
+            </div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-image insight-2"></div>
+            <div class="insight-body">
+              <p class="insight-date">Neighborhood Guide</p>
+              <h3>A Buyer’s Guide to Harbor Point</h3>
+              <p>Explore waterfront access, marina culture, dining, and the homes that define this coveted enclave.</p>
+            </div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-image insight-3"></div>
+            <div class="insight-body">
+              <p class="insight-date">Seller Strategy</p>
+              <h3>How to Position a Legacy Home for Sale</h3>
+              <p>Thoughtful presentation, storytelling, and pricing can transform a distinguished property into a compelling offering.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-portrait">
+          <div class="portrait-frame">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="Professional portrait of Isabella Laurent, luxury real estate agent" />
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">About Isabella</p>
+          <h2>Experience, discretion, and an eye for exceptional homes</h2>
+          <p>
+            Isabella Laurent is a luxury real estate advisor known for representing remarkable properties and the
+            people who call them home. With a background in design, negotiations, and high-touch client service, she
+            brings a thoughtful, strategic approach to every transaction.
+          </p>
+          <p>
+            Her clients value her calm guidance, meticulous preparation, and ability to see beyond square footage—to
+            lifestyle, legacy, and long-term value.
+          </p>
+
+          <div class="credentials">
+            <div><strong>Licensed Real Estate Broker</strong><span>State Real Estate Commission</span></div>
+            <div><strong>Certified Luxury Home Marketing Specialist</strong><span>Luxury Home Marketing Institute</span></div>
+            <div><strong>Top Producer</strong><span>Recognized luxury sales leader</span></div>
+          </div>
+
+          <div class="why-hire">
+            <h3>Why Hire Isabella?</h3>
+            <ul>
+              <li>Luxury-market pricing and positioning expertise</li>
+              <li>Custom marketing for distinctive properties</li>
+              <li>Strong buyer and seller negotiation representation</li>
+              <li>Clear communication and concierge-level service</li>
+              <li>Deep local knowledge and curated market access</li>
+            </ul>
+          </div>
+
+          <a href="#contact" class="btn btn-outline">Schedule a Private Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Private Consultation</p>
+          <h2>Let’s discuss your next chapter</h2>
+          <p>
+            Whether you are considering a sale, searching for an exceptional residence, or simply beginning your
+            research, I would be honored to assist.
+          </p>
+
+          <div class="contact-details">
+            <div><span>Phone</span><strong>(555) 210-4890</strong></div>
+            <div><span>Email</span><strong>hello@isabellalaurent.com</strong></div>
+            <div><span>Office</span><strong>120 Harbor Avenue, Suite 400</strong></div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" required />
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" required />
+          </div>
+          <div class="field">
+            <label for="contactMessage">How can I help?</label>
+            <textarea id="contactMessage" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full">Send Message</button>
+          <p class="form-success" id="contactSuccess" hidden>
+            Thank you for reaching out. Your message has been sent.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand">
+          <span class="brand-mark">IL</span>
+          <span class="brand-text">Isabella Laurent<br><small>Luxury Real Estate</small></span>
+        </a>
+        <p>Representing exceptional properties with discretion, precision, and care.</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="#listings">Featured Listings</a>
+        <a href="#areas">Areas</a>
+        <a href="#valuation">Home Valuation</a>
+        <a href="#insights">Market Insights</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+15552104890">(555) 210-4890</a>
+        <a href="mailto:hello@isabellalaurent.com">hello@isabellalaurent.com</a>
+        <p>120 Harbor Avenue, Suite 400</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Isabella Laurent. All rights reserved. Equal Housing Opportunity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
